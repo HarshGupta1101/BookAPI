@@ -104,11 +104,11 @@ Router.put("/updateName/:id",async (req,res) => {
     return res.json({author: updateAuthor});
 });
 
-//Route - /updateBook/:isbn
+//Route - /updateBook/:ID
 //Description - to update/add new book
 //Access - Public
 //Method - PUT
-//Params - none
+//Params - author id
 
 
 Router.put("/updateBook/:ID",async (req,res) => {

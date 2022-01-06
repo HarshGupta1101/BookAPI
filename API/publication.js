@@ -39,7 +39,7 @@ Router.get("/:publicationID",async (req,res) => {
     return res.json({publication: getSpecificPublication}); 
 });
 
-//Route - /publication/b/:bookISBN
+//Route - /publication/p/:bookISBN
 //Description -  to get a list of publication based on a book.
 //Access - Public
 //Method - GET
@@ -83,11 +83,11 @@ Router.post("/new",async (req,res) => {
 
 //--------------------PUT ROUTE---------------------------//
 
-//Route - /book/update/:ISBN
+//Route - /publication/updatepubname/:ID
 //Description -  update any details of the publication
 //Access - Public
 //Method - PUT
-//Params - ISBN
+//Params - publication ID
 
 
 Router.put("/updatepubname/:id",async (req,res) => {
@@ -107,11 +107,11 @@ Router.put("/updatepubname/:id",async (req,res) => {
     return res.json({publication: updatePublication});
 });
 
-//Route - /updateBook/:ID
+//Route - /publication/updateBook/:ID
 //Description - to update/add new book
 //Access - Public
 //Method - PUT
-//Params - none
+//Params - publication ID
 
 
 Router.put("/updateBook/:ID",async (req,res) => {
@@ -171,7 +171,7 @@ Router.delete("/delete/:ID",async (req,res) => {
 });
 
 
-//Route - /publication/delete/book
+//Route - /publication/delete/book/:isbn/:ID
 //Description -  delete a book from a publication
 //Access - Public
 //Method - DELETE
